@@ -3,6 +3,11 @@
 .App {
   text-align: center;
   font-family: 'Pretendard', sans-serif;
+  padding: 0 20px; /* 작은 화면에서 좌우 여백 추가 */
+}
+body {
+  margin: 0;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -10,18 +15,10 @@
   pointer-events: none;
 }
 
-.input1 {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
+.input1,
 .input2 {
   width: 100%;
+  max-width: 400px; /* 큰 화면에서는 최대 너비 제한 */
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -32,6 +29,7 @@
 
 .button {
   width: 100%;
+  max-width: 400px;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -50,6 +48,23 @@
   background-color: #388e3c;
 }
 
+@media (max-width: 600px) {
+  .input1,
+  .input2,
+  .button {
+    width: calc(100% - 40px); /* 작은 화면에서는 좌우 여백 확보 */
+    max-width: none;
+  }
+}
+
+@media (min-width: 601px) {
+  .input1,
+  .input2,
+  .button {
+    margin: 8px auto; /* 큰 화면에서는 중앙 정렬 */
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -57,10 +72,21 @@
 }
 
 .table {
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 100px;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .table {
+    width: calc(100% - 40px);
+    margin: 0 auto 100px;
+  }
 }
 
 .App-header {
+  width: 100vw;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
