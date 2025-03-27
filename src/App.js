@@ -210,7 +210,7 @@ function App() {
         {euclidTableData.length > 0 && (
           <div style={{ overflowX: 'auto', marginTop: '20px' }}>
             <h3>일반 유클리드 호제법 계산 단계</h3>
-            <table border="1" cellPadding="5">
+            <table border="1" cellPadding="5" className='table'>
               <thead>
                 <tr>
                   <th>n</th>
