@@ -51,7 +51,7 @@ npm start
 localhost:3000에서 앱이 실행됩니다.
 
 ⸻
-
+```
 ## 📁 주요 파일 구조
 ├── node_modules/           #필요한 Node 모듈 포함
 ├── public/
@@ -61,6 +61,7 @@ localhost:3000에서 앱이 실행됩니다.
 │   ├── App.css             # 기본 스타일
 │   └── index.js            # 앱 진입점
 └── README.md               # 프로젝트 설명서
+```
 
 ⸻
 
