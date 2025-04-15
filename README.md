@@ -50,9 +50,10 @@ npm start
 ```
 localhost:3000에서 앱이 실행됩니다.
 
-⸻
+---
 
 ## 📁 주요 파일 구조
+```
 ├── node_modules/           #필요한 Node 모듈 포함
 ├── public/
 │   └── index.html          # HTML 템플릿
@@ -61,8 +62,8 @@ localhost:3000에서 앱이 실행됩니다.
 │   ├── App.css             # 기본 스타일
 │   └── index.js            # 앱 진입점
 └── README.md               # 프로젝트 설명서
-
-⸻
+```
+---
 
 ## 📚 수학 개념 요약
 
@@ -76,7 +77,7 @@ gcd(a, b) = gcd(b, a % b)
 
 ax + by = gcd(a, b) 형태의 베주 항등식(Bézout’s identity) 에서 x, y를 계산합니다.
 
-⸻
+---
 
 ## 🧠 개선 아이디어
 	•	✅ 부정적인 정수 처리 및 예외 케이스 핸들링
@@ -84,8 +85,8 @@ ax + by = gcd(a, b) 형태의 베주 항등식(Bézout’s identity) 에서 x, y
 	•	🌐 다국어 지원 (i18n)
 	•	📱 반응형 UI
 
-⸻
+---
 
-##📝 라이선스
+## 📝 라이선스
 
 이 프로젝트는 MIT 라이선스를 따릅니다.
