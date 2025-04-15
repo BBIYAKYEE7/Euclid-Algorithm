@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 📐 유클리드 알고리즘 계산기 (확장 & 일반)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+두 개의 양의 정수를 입력하면 **확장 유클리드 호제법**과 **일반 유클리드 호제법**을 통해 최대공약수(GCD)를 계산하고, 과정을 테이블로 시각화해주는 React 웹 애플리케이션입니다.
 
-## Available Scripts
+## 🚀 데모
 
-In the project directory, you can run:
+> 로컬에서 실행하여 확인해보세요!
 
-### `npm start`
+![Demo Screenshot](./demo.png) <!-- 필요시 스크린샷 추가 -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 기능
 
-### `npm test`
+- ✅ 양의 정수 두 개를 입력받아 GCD 계산
+- ✅ 일반 유클리드 알고리즘 단계별 계산과정 시각화
+- ✅ 확장 유클리드 알고리즘을 통해 `gcd(a, b) = a·s + b·t` 형태의 베주 항등식 계산
+- ✅ 각 단계의 `q`, `r`, `s`, `t` 값을 표 형태로 확인 가능
+- ⚠️ 잘못된 입력에 대한 유효성 검사 및 에러 메시지 제공
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 사용 기술
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- JavaScript (ES6+)
+- CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📋 사용 방법
 
-### `npm run eject`
+### 1. 프로젝트 클론
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://github.com/BBIYAKYEE7/Euclidean-Algorithm.git
+cd Euclidean-Algorithm
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. 패키지 설치
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. 로컬 서버 실행
 
-## Learn More
+```
+npm start
+```
+localhost:3000에서 앱이 실행됩니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+⸻
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 주요 파일 구조
+├── node_modules/           #필요한 Node 모듈 포함
+├── public/
+│   └── index.html          # HTML 템플릿
+├── src/
+│   ├── App.js              # 메인 컴포넌트
+│   ├── App.css             # 기본 스타일
+│   └── index.js            # 앱 진입점
+└── README.md               # 프로젝트 설명서
 
-### Code Splitting
+⸻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📚 수학 개념 요약
 
-### Analyzing the Bundle Size
+✅ 일반 유클리드 알고리즘
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+두 수 a, b에 대해 gcd(a, b)는 다음과 같이 반복하여 계산됩니다:
 
-### Making a Progressive Web App
+gcd(a, b) = gcd(b, a % b)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+✅ 확장 유클리드 알고리즘
 
-### Advanced Configuration
+ax + by = gcd(a, b) 형태의 베주 항등식(Bézout’s identity) 에서 x, y를 계산합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+⸻
 
-### Deployment
+## 🧠 개선 아이디어
+	•	✅ 부정적인 정수 처리 및 예외 케이스 핸들링
+	•	📈 계산 그래프 시각화 (차트 추가)
+	•	🌐 다국어 지원 (i18n)
+	•	📱 반응형 UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+⸻
 
-### `npm run build` fails to minify
+##📝 라이선스
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이 프로젝트는 MIT 라이선스를 따릅니다.
